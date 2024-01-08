@@ -1,8 +1,130 @@
-.card-img{
-    width: 40%;
-    height: 40%
+/* I HATE CSS */
+:root {
+    --h2: rgb(255, 255, 255);
+    --bg: beige;
+    --form: hsl(236, 32%, 26%);
+    --card-bg: hsl(216, 72%, 14%);
+    --bullets-bg: rgb(250, 250, 247);
+    --bullets: black;
 }
 
-#countryMenu-capital{
-    background-color: brown;
+
+*{
+    font-family: 'Shadows Into Light', cursive;
+    
 }
+
+body{
+    background-color: var(--bg);
+}
+
+h1{
+    text-align: center;
+    font-size: 4.2rem;
+    margin: auto;
+    padding: auto;
+    font-weight: bold;
+
+}
+
+form{
+    text-align: center;
+    margin-bottom: 1.2rem;
+    margin: auto;
+    padding: auto;
+    padding-bottom: 1.2rem;
+}
+
+.card{
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: var(--card-bg);
+    margin-bottom: 0.5%;
+    
+}
+
+.card-name{
+    color:var(--h2);
+    font-weight: bold;
+}
+
+.card-img{
+    width: 70%;
+    height: 60%; 
+    margin: auto;
+    padding: auto;
+    border-radius: 1%;
+}
+
+.bullets{
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: var(--bullets-bg);
+}
+
+p{
+    font-family: 'Indie Flower', cursive;
+    
+    font-size: 1.2rem;
+    color: var(--bullets);
+}
+
+#form-search{    
+    box-shadow: inset #000000 0 0 0 1px; 
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    appearance: none;
+    width: 27%;
+    position: relative;
+    border-radius: 3px;
+    padding: 9px 12px;
+    line-height: 1.4;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+    height: 4%;
+    transition: all .2s ease;
+
+
+}
+
+#form-submit {
+    z-index: 1;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    padding: 0.32em 0.7em;
+    outline: none;
+    border: none;
+    background-color: var(--form);
+  }
+  
+#form-submit::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #127118;
+    transform-origin: center bottom;
+    transform: scaleY(0);
+    transition: transform 0.25s ease-in-out;
+  }
+  
+  #form-submit:hover {
+    cursor: pointer;
+  }
+  
+  #form-submit:hover::before {
+    transform-origin: center top;
+    transform: scaleY(1);
+  }
+  
+
